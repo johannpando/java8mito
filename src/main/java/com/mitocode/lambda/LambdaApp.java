@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Lambda Es un método anónimo que no necesita un identificador para ser invocado.
+ * (parámetros -> expresión)
+ */
 public class LambdaApp {
 
 	public void ordernar() {
@@ -13,7 +17,7 @@ public class LambdaApp {
 		lista.add("Code");
 		lista.add("Mito");
 
-		// JDK < 1.
+		// JDK <= 1.7
 		/*
 		 * Collections.sort(lista, new Comparator<String>() {
 		 * 
@@ -23,7 +27,7 @@ public class LambdaApp {
 		 * });
 		 */
 
-		// Lambda
+		// Lambda JDK >= 8
 		Collections.sort(lista, (String p1, String p2) -> p1.compareTo(p2));
 
 		for (String elemento : lista) {

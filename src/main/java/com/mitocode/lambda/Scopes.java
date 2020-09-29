@@ -1,5 +1,10 @@
 package com.mitocode.lambda;
 
+/**
+ * Notas de los scopes en las lamdas:
+ * - Las variables locales no se pueden reasignar en una expresión lambda. (por lo que no es necesario declararlas final)
+ * - Los atributos de clase pueden ser estáticos o no y se pueden leer o escribir en expresiones lambda.
+ */
 public class Scopes {
 	
 	private static double atributo1;
@@ -8,15 +13,15 @@ public class Scopes {
 	public double probarLocalVariable(){
 				
 		final double n3 = 3;
-		Operacion op = new Operacion(){
+		/*Operacion op = new Operacion(){
 
 			@Override
 			public double calcular(double n1, double n2) {				
 				return n1 + n2 + n3;
 			}
-		};
+		};*/
 		
-		Operacion operacion = (x,y) -> {				
+		Operacion operacion = (x,y) -> {
 			return x + y + n3;
 		};
 				
