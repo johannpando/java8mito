@@ -20,3 +20,13 @@ mvnw.cmd
 # virtual machine crash logs
 hs_err_pid*
 
+# visual code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
