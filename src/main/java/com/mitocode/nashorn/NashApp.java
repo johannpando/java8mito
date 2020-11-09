@@ -6,6 +6,11 @@ import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
+/**
+ * Nashorn, invocar al motor de javascript desde Java.
+ * https://openjdk.java.net/jeps/335
+ * JEP 335: Deprecate the Nashorn JavaScript Engine
+ */
 public class NashApp {
 
 	private ScriptEngineManager m;

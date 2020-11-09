@@ -55,6 +55,9 @@ public class MeRefApp {
 		// Operacion op = () -> MeRefApp.referenciarMetodoStatic();
 		// op.saludar();
 
+		/**
+		 * No se puede enviar parámetros a un método de referencia, al menos de momento, NO IMPLEMENTA CURRIFICACIÓN.
+		 */
 		Operacion op2 = MeRefApp::referenciarMetodoStatic;
 		op2.saludar();
 	}

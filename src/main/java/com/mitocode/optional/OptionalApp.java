@@ -2,6 +2,9 @@ package com.mitocode.optional;
 
 import java.util.Optional;
 
+/**
+ * Hay que tener cuidado al usar esta clase en aplicaciones de alto rendimiento
+ */
 public class OptionalApp {
 
 	public void probar(String valor){
@@ -23,7 +26,8 @@ public class OptionalApp {
 	
 	public void orElseThrow(String valor){
 		Optional<String> op = Optional.ofNullable(valor);
-		op.orElseThrow(NumberFormatException::new);
+		String value = op.orElseThrow(NumberFormatException::new);
+		System.out.println(value);
 	}
 	
 	public void isPresent(String valor){
@@ -35,7 +39,7 @@ public class OptionalApp {
 		OptionalApp app = new OptionalApp();
 		//app.probar("Mito");
 		//app.orElse("Mito");
-		//app.orElseThrow("Mito");
-		app.isPresent("Mito");
+		app.orElseThrow("Mito");
+		//app.isPresent("Mito");
 	}
 }

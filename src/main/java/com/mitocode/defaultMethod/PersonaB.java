@@ -1,4 +1,4 @@
-package com.mitocode.default-method;
+package com.mitocode.defaultMethod;
 
 public interface PersonaB {
 
